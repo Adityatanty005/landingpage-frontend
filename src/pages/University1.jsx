@@ -42,8 +42,9 @@ export default function University1() {
       } else {
         alert("Failed to submit. Try again.");
       }
-    } catch (error) {
-      alert("Error connecting to server.");
+    } catch (err) {
+      console.error(err);
+      alert("Server error");
     }
   }
 
