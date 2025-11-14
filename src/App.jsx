@@ -1,11 +1,14 @@
-//import University1 from "./pages/university1";
-import University2 from "./pages/university2";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import University1 from "./pages/University1";
+import University2 from "./pages/University2";
 
-function App() {
+export default function App() {
   return (
-  //<University1/>
-  <University2 />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/lpu" element={<University1 />} />
+        <Route path="/giet" element={<University2 />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
