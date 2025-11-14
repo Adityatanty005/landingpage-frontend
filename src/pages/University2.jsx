@@ -40,6 +40,7 @@ export default function University2() {
         ? alert("Form submitted successfully!")
         : alert("Submission failed");
     } catch (err) {
+      console.error(err);
       alert("Server error");
     }
 
