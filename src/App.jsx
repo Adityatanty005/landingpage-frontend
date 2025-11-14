@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import University1 from "./pages/University1.jsx";
-import University2 from "./pages/University2.jsx";
+import University2 from "./pages/temp2.jsx";
 
 export default function App() {
   return (
