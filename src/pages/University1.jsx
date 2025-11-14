@@ -236,72 +236,151 @@ export default function University1() {
         </div>
       </section>
 
-      <section id="apply" className="py-20 bg-gray-50 px-6">
-        <h2 className="text-3xl font-extrabold text-center text-orange-700">
-          Apply Now
-        </h2>
+      {/*  APPLY NOW FORM  */}
+      <section id="apply" className="bg-light">
+        <div className="max-w-3xl mx-auto">
+          <h3 className="text-4xl font-extrabold text-center text-orange-700">
+            Apply Now
+          </h3>
+          <p className="text-gray-600 text-center mt-2 mb-10">
+            Join India’s Premier Engineering Institute
+          </p>
 
-        <p className="text-center text-gray-600 mt-2 mb-10">
-          Begin your journey at LPU
-        </p>
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-orange-100">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block font-medium text-gray-700 mb-1">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                  placeholder="Enter your full name"
+                />
+              </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="max-w-3xl mx-auto bg-white p-10 shadow-xl rounded-xl grid grid-cols-1 gap-5"
-        >
-          <input
-            type="text"
-            placeholder="Full Name *"
-            required
-            className="border p-3 rounded"
-          />
-          <input
-            type="email"
-            placeholder="Email Address *"
-            required
-            className="border p-3 rounded"
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number (10-digit) *"
-            required
-            className="border p-3 rounded"
-          />
-          <input
-            type="text"
-            placeholder="State *"
-            required
-            className="border p-3 rounded"
-          />
+              <div>
+                <label className="block font-medium text-gray-700 mb-1">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  required
+                  className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                  placeholder="Enter your email"
+                />
+              </div>
 
-          <select required className="border p-3 rounded">
-            <option value="">Select Course</option>
-            <option>B.Tech</option>
-            <option>BBA</option>
-            <option>BCA</option>
-            <option>MBA</option>
-          </select>
+              <div>
+                <label className="block font-medium text-gray-700 mb-1">
+                  Phone Number (10-digit) *
+                </label>
+                <input
+                  type="tel"
+                  required
+                  pattern="[0-9]{10}"
+                  maxLength="10"
+                  className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                  placeholder="Enter your phone number"
+                />
+              </div>
 
-          <select required className="border p-3 rounded">
-            <option value="">Intake Year</option>
-            <option>2024</option>
-            <option>2025</option>
-          </select>
+              {/* State */}
+              <div class="form-group">
+                <label className="block font-medium text-gray-700 mb-1">
+                  State *
+                </label>
+                <select
+                  required
+                  className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                >
+                  <option value="">Select State</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                  <option value="Delhi">Delhi</option>
+                </select>
+              </div>
 
-          <label className="flex gap-3 items-center mt-2">
-            <input type="checkbox" required />
-            <span className="text-gray-700">
-              I agree to receive communications and updates *
-            </span>
-          </label>
+              <div>
+                <label className="block font-medium text-gray-700 mb-1">
+                  Course Interested *
+                </label>
+                <select
+                  required
+                  className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                >
+                  <option value="">Select Course</option>
+                  <option value="Computer Science & Engineering">
+                    Computer Science & Engineering
+                  </option>
+                  <option value="Mechanical Engineering">
+                    Mechanical Engineering
+                  </option>
+                  <option value="Civil Engineering">Civil Engineering</option>
+                  <option value="Electrical Engineering">
+                    Electrical Engineering
+                  </option>
+                </select>
+              </div>
 
-          <button
-            type="submit"
-            className="w-full py-3 bg-orange-700 text-white rounded-lg text-lg font-semibold hover:bg-orange-800 transition"
-          >
-            Submit Application
-          </button>
-        </form>
+              <div>
+                <label className="block font-medium text-gray-700 mb-1">
+                  Intake Year *
+                </label>
+                <select
+                  required
+                  className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                >
+                  <option value="">Select Year</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                </select>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <input type="checkbox" required className="mt-1 h-5 w-5" />
+                <p className="text-gray-700 text-sm">
+                  I agree to receive communications and information about
+                  programs and events *
+                </p>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-orange-800 text-white py-3 rounded-lg font-semibold text-lg hover:bg-orange-900 transition"
+              >
+                Submit Application
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
 
       <footer className="bg-orange-900 text-white py-6 text-center mt-10">
